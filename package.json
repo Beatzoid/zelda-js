@@ -1,0 +1,13 @@
+{
+    "scripts": {
+        "prepare": "yarn clean && npm run build",
+        "lint": "eslint --ext ts,js .",
+        "clean": "rm -rf dist",
+        "dev": "parcel public/index.html",
+        "build": "parcel build public/index.html"
+    },
+    "devDependencies": {
+        "parcel": "^2.8.0",
+        "typescript": "^4.9.3"
+    }
+}
