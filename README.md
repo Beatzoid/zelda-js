@@ -4,7 +4,7 @@ A Zelda clone made using Javascript
 
 # Demo
 
-Soon
+[Here](https://zelda-js.vercel.app/)
 
 # Credit
 
