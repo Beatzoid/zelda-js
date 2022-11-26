@@ -2,10 +2,12 @@
     "scripts": {
         "prepare": "yarn clean && npm run build",
         "lint": "eslint --ext ts,js .",
-        "clean": "rm -rf dist",
-        "dev": "parcel public/index.html",
-        "build": "yarn clean && parcel build public/index.html && cp -r ./public/imgs dist/imgs",
-        "start": "parcel start public/index.html"
+        "clean": "rm -rf dist/**/*",
+        "prepareEnv": "yarn clean && yarn cpImgs",
+        "dev": "yarn prepareEnv && parcel public/index.html",
+        "cpImgs": "cp -r ./public/imgs dist",
+        "build": "yarn prepareEnv && parcel build public/index.html",
+        "start": "yarn prepareEnv && parcel start public/index.html"
     },
     "devDependencies": {
         "parcel": "^2.8.0",
